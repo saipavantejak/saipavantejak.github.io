@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sai Pavan Teja Kunche</title>
+    <title>Sai Pavan Teja Kunche - AI Software Engineer</title>
     
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
     <style>
         /* General Reset & Body Styles */
         body {
             font-family: 'Open Sans', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa; /* Light background */
+            background-color: #f8f9fa;
             color: #333;
             line-height: 1.6;
             scroll-behavior: smooth;
@@ -23,7 +23,7 @@
             padding: 20px;
         }
 
-        /* Navbar for navigation */
+        /* Navbar */
         nav {
             background-color: #fff;
             padding: 15px 0;
@@ -57,31 +57,31 @@
              font-family: 'Montserrat', sans-serif;
         }
 
-        /* Hero Section - The "Stunning" part */
+        /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #007bff, #0056b3); /* Blue gradient */
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Tech/Darker gradient */
             color: #fff;
             text-align: center;
             padding: 80px 20px;
             position: relative;
-            overflow: hidden; /* For potential background effects */
         }
         .hero-content {
             z-index: 10;
             position: relative;
         }
         .hero img {
-            border-radius: 50%; /* Circular image */
-            width: 180px; /* Larger image */
+            border-radius: 50%;
+            width: 180px;
             height: 180px;
             object-fit: cover;
-            border: 5px solid rgba(255,255,255,0.8); /* White border */
+            border: 5px solid rgba(255,255,255,0.8);
             margin-bottom: 20px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.2); /* Subtle shadow */
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
             transition: transform 0.3s ease;
+            background-color: #fff; /* Fallback */
         }
         .hero img:hover {
-            transform: scale(1.05); /* Slight zoom on hover */
+            transform: scale(1.05);
         }
         .hero h1 {
             font-family: 'Montserrat', sans-serif;
@@ -97,7 +97,7 @@
         }
         .hero-buttons a {
             display: inline-block;
-            background-color: #28a745; /* Green call to action */
+            background-color: #28a745;
             color: #fff;
             padding: 12px 25px;
             border-radius: 5px;
@@ -111,7 +111,7 @@
             transform: translateY(-3px);
         }
         .hero-buttons a.secondary {
-            background-color: #6c757d; /* Grey for secondary action */
+            background-color: #6c757d;
         }
         .hero-buttons a.secondary:hover {
             background-color: #5a6268;
@@ -126,7 +126,7 @@
             border-radius: 8px;
         }
         .section-alt {
-            background-color: #e9ecef; /* Slightly different background for contrast */
+            background-color: #e9ecef;
         }
         h2 {
             font-family: 'Montserrat', sans-serif;
@@ -136,7 +136,7 @@
             margin-bottom: 40px;
             position: relative;
         }
-        h2::after { /* Underline effect for headings */
+        h2::after {
             content: '';
             display: block;
             width: 80px;
@@ -151,16 +151,8 @@
             color: #343a40;
             margin-bottom: 15px;
         }
-        h4 {
-             font-family: 'Montserrat', sans-serif;
-             color: #555;
-             margin-bottom: 5px;
-        }
-        p {
-            margin-bottom: 1em;
-        }
         ul {
-            list-style: none; /* Remove default bullet */
+            list-style: none;
             padding: 0;
         }
         ul li {
@@ -168,15 +160,15 @@
             position: relative;
             margin-bottom: 0.8em;
         }
-        ul li::before { /* Custom bullet point */
-            content: '👉'; /* Or a unicode checkmark: ✓ */
+        ul li::before {
+            content: '👉';
             position: absolute;
             left: 0;
             color: #007bff;
             font-size: 1.2em;
         }
 
-        /* Specific section styles */
+        /* Items */
         .experience-item, .project-item {
             display: flex;
             margin-bottom: 30px;
@@ -186,7 +178,9 @@
             font-size: 2.5em;
             color: #007bff;
             margin-right: 20px;
-            flex-shrink: 0; /* Prevent icon from shrinking */
+            flex-shrink: 0;
+            min-width: 50px;
+            text-align: center;
         }
         .experience-details, .project-details {
             flex-grow: 1;
@@ -200,6 +194,8 @@
             font-style: italic;
             margin-bottom: 10px;
         }
+        
+        /* Skills Grid */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -219,8 +215,8 @@
             margin-top: 0;
         }
         .skill-category ul li::before {
-             content: '⭐'; /* Different bullet for skills */
-             color: #ffc107; /* Star color */
+             content: '💻'; 
+             color: #28a745;
         }
 
         /* Footer */
@@ -248,48 +244,25 @@
             color: #007bff;
         }
 
-
-        /* Responsive Adjustments */
+        /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5em;
-            }
-            .hero p {
-                font-size: 1.1em;
-            }
-            .hero-buttons a {
-                display: block;
-                margin: 10px auto;
-                width: 80%;
-            }
-            h2 {
-                font-size: 2em;
-            }
-            .nav-links {
-                display: none; /* Hide nav links on small screens, can implement a burger menu */
-            }
-            .nav-brand {
-                width: 100%;
-                text-align: center;
-            }
+            .hero h1 { font-size: 2.5em; }
+            .hero p { font-size: 1.1em; }
+            .hero-buttons a { display: block; margin: 10px auto; width: 80%; }
             .experience-item, .project-item {
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
             }
-            .experience-icon, .project-icon {
-                margin-right: 0;
-                margin-bottom: 15px;
-            }
-            .skill-category {
-                padding: 15px;
-            }
+            .experience-icon, .project-icon { margin-right: 0; margin-bottom: 15px; }
+            .nav-links { display: none; } /* Consider adding a mobile menu script */
+            .nav-brand { width: 100%; text-align: center; }
         }
     </style>
 </head>
 <body>
     
-<nav>
+    <nav>
         <div class="container">
             <div class="nav-brand">Sai Pavan Teja Kunche</div>
             <div class="nav-links">
@@ -303,15 +276,13 @@
         </div>
     </nav>
 
-    
-<section class="hero" id="home">
+    <section class="hero" id="home">
         <div class="hero-content">
-            
-<img src="https://i.imgur.com/CiCGQ5y.jpeg" alt="Sai Pavan Teja Kunche">
-            <h1>Propulsion Engineer & Data Innovator</h1>
-            <p>Advancing aerospace innovation through sustainable propulsion technologies, data-driven insights, and integrated flight safety solutions.</p>
+            <img src="https://via.placeholder.com/180?text=SPTK" alt="Sai Pavan Teja Kunche">
+            <h1>AI Software Engineer</h1>
+            <p>Building next-generation engineering tools with LLMs, RAG Architectures, and Full-Stack Web Development.</p>
             <div class="hero-buttons">
-                <a href="#projects">View My Work</a>
+                <a href="#projects">View My Code</a>
                 <a href="https://linkedin.com/in/sai-pavan-teja-kunche-44a33a15b/" target="_blank" class="secondary">Connect on LinkedIn</a>
             </div>
         </div>
@@ -319,151 +290,149 @@
 
     <div class="container">
         
-<section class="section" id="summary">
+        <section class="section" id="summary">
             <h2>Professional Summary</h2>
-            <p>Entry-level Propulsion Engineer with a B.Tech in Aerospace Engineering and ongoing MS in Information Technology Management (expected May 2025). Expertise in propulsion system design, optimization, and simulation using ANSYS, SolidWorks, and MATLAB. Proven track record in aviation data analytics at Camp Systems Inc., delivering insights that enhanced operational efficiency by 20%. Passionate about advancing aerospace innovation through sustainable propulsion technologies, avionics integration, and flight safety solutions at Honeywell.</p>
+            <p>AI Software Engineer with a specialized Master’s in IT Management and strong proficiency in TypeScript, Python, and Full-Stack Web Development. I have hands-on experience building AI-driven corporate tools using Large Language Models (LLMs), RAG architectures, and Vector Embeddings.</p>
+            <p>Passionate about designing next-generation engineering tools and internal workflow solutions that enhance productivity in the semiconductor and enterprise ecosystems.</p>
         </section>
 
-        
-<section class="section section-alt" id="experience">
+        <section class="section section-alt" id="experience">
             <h2>Professional Experience</h2>
             <div class="experience-item">
                 <div class="experience-icon">📊</div> 
-<div class="experience-details">
-                    <h3>Associate Data Analyst | Camp Systems Inc.</h3>
-                    <p><i>Nov 2022 - Jun 2023</i></p>
+                <div class="experience-details">
+                    <h3>Associate Data Analyst | Camp Systems International</h3>
+                    <p><i>Hyderabad, India | June 2021 – June 2023</i></p>
                     <ul>
-                        <li>Extracted, cleaned, and analyzed 50K+ large datasets using SQL and Python, providing actionable insights for aviation maintenance and operational efficiency, reducing downtime by 15%.</li>
-                        <li>Developed automated reports and dashboards using Excel, Tableau, and Power BI to track 25+ key performance indicators (KPIs), supporting propulsion system health monitoring and decision-making for flight safety.</li>
-                        <li>Collaborated with cross-functional teams of 10+ engineers to streamline data processes, improve data quality by 25%, and deliver ad hoc analysis for business needs in avionics and propulsion optimization.</li>
+                        <li>Designed automated data mapping and validation workflows to migrate legacy aviation records, improving data accuracy by 15%.</li>
+                        <li>Built SQL-driven dashboards to monitor fleet maintenance health, enabling stakeholders to make data-backed operational decisions.</li>
+                        <li>Reduced data processing turnaround time by 20% by implementing structured data validation and transformation logic.</li>
+                        <li>Authored data standardization and compliance documentation, accelerating onboarding and ensuring consistent interpretation of technical manuals.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-icon">🚀</div> 
+                <div class="experience-details">
+                    <h3>Research Supervisor | Abyom Space Tech</h3>
+                    <p><i>Gujarat, India | March 2021 – May 2021</i></p>
+                    <ul>
+                        <li>Led a team of junior engineers in the R&D roadmap for subsystem simulations, fostering a culture of innovation.</li>
+                        <li>Orchestrated static fire testing campaigns and overseen Data Acquisition (DAQ) system setups to validate performance across 20+ successful test cycles.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        
-<section class="section" id="projects">
-            <h2>Innovative Projects</h2>
+        <section class="section" id="projects">
+            <h2>AI & Engineering Projects</h2>
             <div class="project-item">
-                <div class="project-icon">🚁</div> 
-<div class="project-details">
-                    <h3>Cargo Drone Propulsion System Design</h3>
+                <div class="project-icon">🤖</div> 
+                <div class="project-details">
+                    <h3>DocuQuery AI (TerrierHelper) - Institutional RAG Assistant</h3>
+                    <p><i>Tech Stack: Gemini API, React, TypeScript, RAG, Vector Retrieval</i></p>
                     <ul>
-                        <li>Designed and developed a 3D model of a bi-copter cargo drone utilizing a swash plate mechanism for advanced control and stability, optimizing propulsion for 30% improved thrust efficiency.</li>
-                        <li>Collaborated on the mechanical design and integration of the drone’s propulsion and control systems, incorporating sustainable materials to enhance cargo transport efficiency and reduce emissions.</li>
-                        <li>Utilized 3D modeling software SolidWorks, AutoCAD, Autodesk Fusion 360 to prototype and test the drone design for real-world functionality and performance in ANSYS simulations.</li>
+                        <li>Engineered a client-side RAG system that ingests PDFs and delivers policy-accurate answers using LLM embeddings and retrieval pipelines.</li>
+                        <li>Implemented strict prompt guardrails to eliminate hallucinations and ensure responses were grounded only in enterprise documents.</li>
+                        <li>Enabled real-time token streaming to enhance responsiveness and user experience for complex document queries.</li>
+                        <li>Designed the system to be integration-ready for internal knowledge bases and business support workflows.</li>
                     </ul>
                 </div>
             </div>
             <div class="project-item">
-                <div class="project-icon">✈️</div> 
-<div class="project-details">
-                    <h3>Hypersonic Propulsion Engine Simulation (Capstone Project)</h3>
+                <div class="project-icon">📧</div> 
+                <div class="project-details">
+                    <h3>University Smart Outlook - LLM-Powered Email Automation</h3>
+                    <p><i>Tech Stack: Gemini Flash, Python, Workflow Automation, PDF Parsing</i></p>
                     <ul>
-                        <li>Modeled a scramjet propulsion system for hypersonic flight using MATLAB and Simulink, simulating airflow dynamics and thrust generation under extreme conditions (Mach 5+ speeds).</li>
-                        <li>Integrated computational fluid dynamics (CFD) analysis with ANSYS to optimize fuel injection and nozzle geometry, achieving 18% better thermal efficiency.</li>
-                        <li>Presented findings to a panel of 5 industry experts, incorporating avionics feedback for real-time control integration, demonstrating readiness for advanced propulsion engineering challenges.</li>
+                        <li>Developed a custom AI tool that analyzes incoming emails and auto-drafts context-aware responses from a secured knowledge base.</li>
+                        <li>Implemented a human-in-the-loop approval system to ensure compliance with official communication guidelines.</li>
+                        <li>Reduced manual email drafting effort while maintaining 100% response accuracy and professionalism.</li>
+                        <li>Applied semantic analysis to ensure the AI adopted an administrative assistant persona for consistent communication tone.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        
-<section class="section section-alt" id="skills">
+        <section class="section section-alt" id="skills">
             <h2>Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Programming</h3>
+                    <h3>AI & Machine Learning</h3>
                     <ul>
-                        <li>Python, C++, R, SQL</li>
-                        <li>HTML/CSS, MATLAB</li>
+                        <li>Retrieval-Augmented Generation (RAG)</li>
+                        <li>LLMs (Gemini), Vector Embeddings</li>
+                        <li>Prompt Engineering, LangChain</li>
+                        <li>ChromaDB Concepts</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Platforms & Tools</h3>
+                    <h3>Web Technologies</h3>
                     <ul>
-                        <li>Visual Studio, Eclipse, Anaconda</li>
-                        <li>PyCharm, Jupyter, Google Colab, MySQL</li>
+                        <li>TypeScript, JavaScript (ES6+)</li>
+                        <li>React.js, Node.js</li>
+                        <li>HTML5, CSS3</li>
+                        <li>RESTful APIs</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Design & Simulation Software</h3>
+                    <h3>Languages</h3>
                     <ul>
-                        <li>AutoCAD, Autodesk Fusion 360, CATIA</li>
-                        <li>ANSYS, SolidWorks, Simulink</li>
+                        <li>Python (AI & Backend)</li>
+                        <li>SQL</li>
+                        <li>Java</li>
+                        <li>C++</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Other Skills</h3>
+                    <h3>Tools & Cloud</h3>
                     <ul>
-                        <li>Data Visualization (Tableau, Power BI)</li>
-                        <li>Version Control (Git)</li>
-                        <li>Aerospace Modeling (Fortran for CFD)</li>
+                        <li>Git, Docker</li>
+                        <li>AWS, Google Cloud Vertex AI</li>
+                        <li>Jupyter, Pandas</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        
-<section class="section" id="education">
-            <h2>Academic Journey</h2>
+        <section class="section" id="education">
+            <h2>Education</h2>
             <div class="experience-item">
                 <div class="experience-icon">🎓</div>
                 <div class="experience-details">
                     <h3>Master of Science, Information Technology Management</h3>
-                    <p><i>Saint Francis College, Brooklyn, New York | GPA: 3.2/4.0 | Aug 2023 - May 2025</i></p>
-                    <ul>
-                        <li><b>Relevant Coursework:</b> Data Analytics, Business Intelligence, Project Management, Database Management, System Analysis and Design, Cyber Security.</li>
-                    </ul>
+                    <p><i>St. Francis College, Brooklyn, NY | Aug 2023 – Present</i></p>
                 </div>
             </div>
             <div class="experience-item">
-                <div class="experience-icon">🚀</div>
+                <div class="experience-icon">🎓</div>
                 <div class="experience-details">
                     <h3>Bachelor of Technology, Aerospace Engineering</h3>
-                    <p><i>Lovely Professional University, Punjab, India | CGPA: 6.0/10.0 | Aug 2017 - Jun 2022</i></p>
-                    <ul>
-                        <li><b>Relevant Coursework:</b> Propulsion Systems, Aerodynamics, Flight Mechanics, Avionics, Aerospace Materials, Rockets and Missiles, CFD, MATLAB.</li>
-                    </ul>
+                    <p><i>Lovely Professional University, India | Aug 2017 – May 2021</i></p>
                 </div>
             </div>
         </section>
 
-        
-<section class="section section-alt" id="research-certs">
-            <h2>Research & Certifications</h2>
-            <div class="project-item">
-                 <div class="project-icon">🔬</div>
-                <div class="project-details">
-                    <h3>Research: A Novel Theory on Multiple Phases of Universe</h3>
-                    <p><i>IJASEAT Journal, 2022</i></p>
-                    <ul>
-                        <li>Explored quantum-scale patterns and super-large cosmic relations using computational modeling with MATLAB and Python.</li>
-                        <li>Analyzed how universal constraints mirror challenges in rocket propulsion design, proposing multi-phase modeling techniques for enhanced flight mechanics.</li>
-                    </ul>
-                </div>
-            </div>
-            <h3>Certifications</h3>
+        <section class="section section-alt" id="certifications">
+            <h2>Certifications</h2>
             <ul>
-                <li>Python for Data Science – Coursera, 2023</li>
-                <li>Aerospace Materials – Coursera, 2022</li>
-                <li>ANSYS for Structural Analysis – Coursera, 2023</li>
-                <li>Propulsion Fundamentals – edX (MIT), 2024</li>
+                <li>Accenture Strategy Consulting Simulation (Forage)</li>
+                <li>PwC Digital Intelligence Simulation (Forage)</li>
+                <li>Programming for Everybody – Coursera</li>
+                <li>Aerospace Materials – Coursera</li>
             </ul>
         </section>
     </div>
 
-    
-<footer id="contact">
+    <footer id="contact">
         <div class="container">
             <h3>Let's Connect!</h3>
-            <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
-            <p>Email: <a href="mailto:pavankunche9900@gmail.com">pavankunche9900@gmail.com</a> | Phone: +1 (201) 492 8389</p>
+            <p>I'm always open to discussing new AI projects and engineering opportunities.</p>
+            <p>Email: <a href="mailto:saiptkunche@gmail.com">saiptkunche@gmail.com</a> | Phone: (+1) 551 208 4764</p>
             <div class="social-links">
                 <a href="https://linkedin.com/in/sai-pavan-teja-kunche-44a33a15b/" target="_blank" title="LinkedIn">in</a>
-                
-</div>
-            <p>&copy; 2025 Sai Pavan Teja Kunche. All rights reserved.</p>
+            </div>
+            <p>&copy; 2025 Sai Pavan Teja Kunche.</p>
         </div>
     </footer>
 </body>
