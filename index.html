@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Sai Pavan Teja Kunche — AI/ML & Robotics Engineer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sai Pavan Teja Kunche — Software Engineer</title>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <style>
@@ -15,7 +15,7 @@
   --gcyan:0 0 25px rgba(0,229,255,.45);
 }
 html{scroll-behavior:smooth}
-body{background:var(--void);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden;cursor:none}
+body{background:var(--void);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden;}
 body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9000;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.018) 2px,rgba(0,0,0,.018) 4px)}
 .orb{position:fixed;border-radius:50%;pointer-events:none;z-index:0;filter:blur(130px)}
 .orb-1{width:700px;height:700px;background:radial-gradient(circle,rgba(0,229,255,.05) 0%,transparent 70%);top:-200px;right:-150px;animation:orbf 14s ease-in-out infinite}
@@ -60,7 +60,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.1rem 2.5rem;displ
 .hero-badge.blue{border-color:rgba(0,229,255,.3);color:var(--cyan);background:rgba(0,229,255,.04)}
 .hero-badge.purple{border-color:rgba(139,92,246,.3);color:var(--purple);background:rgba(139,92,246,.04)}
 .hero-cta{display:flex;gap:1rem;flex-wrap:wrap;opacity:0;animation:fadeUp .8s 1.2s forwards}
-.btn{font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.1em;padding:.88rem 2rem;text-decoration:none;cursor:none;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s;display:inline-block}
+.btn{font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.1em;padding:.88rem 2rem;text-decoration:none;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s;display:inline-block;cursor:pointer;}
 .btn::after{content:'';position:absolute;inset:0;background:rgba(255,255,255,.06);transform:translateX(-101%);transition:transform .35s}
 .btn:hover::after{transform:translateX(0)}
 .btn:hover{transform:translateY(-3px)}
@@ -230,7 +230,6 @@ section{padding:7.5rem 8vw;position:relative}
   padding:2.6rem;
   position:relative;
   overflow:hidden;
-  cursor:none;
   transition:box-shadow .35s,border-color .3s;
   transform-style:preserve-3d;
   grid-column:1/-1;
@@ -270,8 +269,6 @@ section{padding:7.5rem 8vw;position:relative}
   color:rgba(245,158,11,.04);position:absolute;top:.5rem;right:1.8rem;
   line-height:1;user-select:none;
 }
-.feat-left{}
-.feat-right{}
 .feat-icon-lg{
   width:88px;height:88px;position:relative;margin-bottom:1.8rem;
 }
@@ -313,7 +310,7 @@ section{padding:7.5rem 8vw;position:relative}
 .arch-arrow{color:var(--muted);font-size:.7rem}
 
 /* Regular proj cards */
-.proj-card{background:var(--surface);border:1px solid var(--border);padding:2rem;position:relative;overflow:hidden;cursor:none;transition:box-shadow .35s;transform-style:preserve-3d}
+.proj-card{background:var(--surface);border:1px solid var(--border);padding:2rem;position:relative;overflow:hidden;transition:box-shadow .35s;transform-style:preserve-3d}
 .proj-card::before{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,rgba(0,229,255,.05) 50%,rgba(139,92,246,.05) 62%,transparent 72%);opacity:0;transition:opacity .4s}
 .proj-card:hover::before{opacity:1}
 .proj-card::after{content:'';position:absolute;inset:0;border:1px solid rgba(0,229,255,.35);opacity:0;transition:opacity .35s;pointer-events:none}
@@ -369,9 +366,17 @@ section{padding:7.5rem 8vw;position:relative}
 .cl:hover{color:var(--cyan);border-color:var(--cyan);box-shadow:var(--gcyan)}
 footer{background:var(--deep);padding:2rem 8vw;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--border)}
 footer p{font-family:'Space Mono',monospace;font-size:.6rem;color:var(--muted);letter-spacing:.06em}
+
+/* MOBILE RESPONSIVE FIXES */
 @media(max-width:1100px){.proj-card-featured{grid-template-columns:1fr}.feat-right{display:none}}
 @media(max-width:900px){.about-grid{grid-template-columns:1fr}.edu-grid{grid-template-columns:1fr}.cert-grid{grid-template-columns:1fr}}
-@media(max-width:600px){nav{padding:1rem 1.5rem}.nav-links{display:none}section{padding:5rem 6vw}.proj-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  nav{padding:1rem;flex-direction:column;gap:0.8rem;}
+  .nav-links{flex-wrap:wrap;justify-content:center;gap:0.8rem;}
+  .nav-links a{font-size:0.55rem;}
+  section{padding:6rem 6vw 4rem 6vw;}
+  .proj-grid{grid-template-columns:1fr;}
+}
 </style>
 </head>
 <body>
@@ -402,23 +407,23 @@ footer p{font-family:'Space Mono',monospace;font-size:.6rem;color:var(--muted);l
 <section id="hero">
   <canvas id="neural-canvas"></canvas>
   <div class="hero-content">
-    <p class="hero-label">SYSTEM ONLINE · AI / ML &amp; ROBOTICS ENGINEER</p>
+    <p class="hero-label">SYSTEM ONLINE · SOFTWARE ENGINEER · SYSTEMS &amp; AI</p>
     <h1 class="hero-name">
       <span class="glitch" data-text="SAI PAVAN">SAI PAVAN</span><br>
       <span class="glitch accent" data-text="TEJA KUNCHE">TEJA KUNCHE</span>
     </h1>
     <p class="hero-role" id="typer"></p>
-    <p class="hero-desc">Building <em>production-grade AI systems</em> — from LLM-powered RAG pipelines to aerospace-grade <em>Digital Twin simulators</em> with hardware-in-the-loop MAVLink bridges. Aerospace-trained. AI-obsessed.</p>
+    <p class="hero-desc">Building <em>scalable software systems</em> — from distributed task queues and custom search engines to <em>LLM-powered RAG pipelines</em> and aerospace-grade Digital Twin simulators. Full-Stack Builder. Systems &amp; AI-obsessed.</p>
     <div class="hero-badges">
-      <span class="hero-badge">MAVLink v2 HIL Bridge</span>
-      <span class="hero-badge blue">RK4 + BET + Quaternion Physics</span>
-      <span class="hero-badge purple">PPO Reinforcement Learning</span>
+      <span class="hero-badge">Distributed Systems</span>
+      <span class="hero-badge blue">Algorithmic Design</span>
+      <span class="hero-badge purple">Information Retrieval</span>
       <span class="hero-badge blue">RAG · LLM · Vector Retrieval</span>
       <span class="hero-badge">Digital Twin Architecture</span>
     </div>
     <div class="hero-cta">
       <a href="#projects" class="btn btn-p">VIEW PROJECTS</a>
-      <a href="https://linkedin.com/in/sai-pavan-teja-kunche-44a33a15b/" target="_blank" class="btn btn-s">CONNECT</a>
+      <a href="https://linkedin.com/in/sai-pavan-teja-kunche-44a33a15b/" target="_blank" rel="noopener noreferrer" class="btn btn-s">CONNECT</a>
     </div>
   </div>
   <div class="scrl"><span>SCROLL</span><div class="scrl-line"></div></div>
@@ -427,15 +432,15 @@ footer p{font-family:'Space Mono',monospace;font-size:.6rem;color:var(--muted);l
 <!-- ABOUT -->
 <section id="about">
   <div class="s-label">01 · ABOUT</div>
-  <h2 class="s-title rv">The Mind Behind<br>the <span class="accent">Machine</span></h2>
+  <h2 class="s-title rv">The Mind Behind<br>the <span class="accent">Architecture</span></h2>
   <div class="about-grid">
     <div class="rv-l">
       <div class="photo-box">
         <span class="photo-corner pc-tl"></span><span class="photo-corner pc-tr"></span>
         <span class="photo-corner pc-bl"></span><span class="photo-corner pc-br"></span>
-        <img class="about-photo" src="https://imgur.com/qIaV3m3.png" alt="Sai Pavan Teja Kunche"/>
+        <img class="about-photo" src="https://imgur.com/a/9UbyNmG.png" alt="Sai Pavan Teja Kunche"/>
         <div class="photo-overlay"><div class="scan-beam"></div></div>
-        <svg class="photo-mesh-svg" viewBox="0 0 356 474" preserveAspectRatio="none">
+        <svg class="photo-mesh-svg" viewBox="0 0 356 474" preserveAspectRatio="none" aria-hidden="true">
           <line class="mesh-line" x1="80" y1="80" x2="178" y2="58"/><line class="mesh-line" x1="178" y1="58" x2="278" y2="82"/>
           <line class="mesh-line" x1="278" y1="82" x2="298" y2="198"/><line class="mesh-line" x1="298" y1="198" x2="238" y2="318"/>
           <line class="mesh-line" x1="238" y1="318" x2="178" y2="378"/><line class="mesh-line" x1="178" y1="378" x2="118" y2="308"/>
@@ -452,34 +457,31 @@ footer p{font-family:'Space Mono',monospace;font-size:.6rem;color:var(--muted);l
           <div class="hud-tl"></div><div class="hud-tr"></div>
           <div class="hud-bl"></div><div class="hud-br"></div>
           <div class="hud-label">[SCAN] SYNCED</div>
-          <div class="hud-footer">ID: SPT_K · AI/ML · v2.0</div>
+          <div class="hud-footer">ID: SPT_K · SWE · v2.0</div>
         </div>
       </div>
       <div class="stats-grid">
         <div class="stat"><div class="stat-n" data-target="2">0</div><div class="stat-l">Years XP</div></div>
-        <div class="stat"><div class="stat-n" data-target="6">0</div><div class="stat-l">AI Projects</div></div>
+        <div class="stat"><div class="stat-n" data-target="8">0</div><div class="stat-l">Systems Engineered</div></div>
         <div class="stat"><div class="stat-n" data-target="4">0</div><div class="stat-l">Certifications</div></div>
         <div class="stat"><div class="stat-n" data-target="20">0</div><div class="stat-l">Test Cycles Led</div></div>
       </div>
     </div>
     <div class="about-copy rv">
-      <h3>AI Engineer &amp; Simulation Architect</h3>
-      <p>I'm an <strong>AI Software Engineer</strong> with a Master's in IT Management and a B.Tech in Aerospace Engineering — an unusual combination that lets me operate at the intersection of machine intelligence and real physical systems.</p>
-      <p>My flagship work is the <strong>Copter Studios</strong> — a production-grade bi-copter simulator with RK4+BET+Quaternion physics, a <strong>MAVLink v2 HIL bridge</strong> built from scratch that connects to real PX4/ArduPilot flight controllers, and an AI-powered sim operator powered by Gemini. This is the kind of systems-level engineering that defines modern <strong>aerospace AI and robotics</strong>.</p>
-      <p>Beyond simulation, I architect <strong>RAG systems</strong>, LLM-powered automation workflows, and full-stack AI tools — deploying across enterprise environments where reliability and auditability are non-negotiable.</p>
+      <h3>Software Engineer &amp; Full-Stack Builder</h3>
+      <p>I'm a <strong>Software Engineer</strong> with a Master's in IT Management and a B.Tech in Aerospace Engineering — an unusual combination that lets me operate at the intersection of algorithmic system design, distributed infrastructure, and applied machine intelligence.</p>
+      <p>I build <strong>scalable software systems end-to-end</strong>. Whether that means engineering a fault-tolerant distributed task queue from scratch using Python sockets, creating a custom inverted-index search engine with min-heap retrieval, or deploying <strong>production-grade digital twins</strong> with custom MAVLink v2 bridges.</p>
+      <p>Beyond core computer science fundamentals, I architect <strong>RAG systems</strong>, LLM-powered automation workflows, and full-stack applications — deploying across enterprise environments where reliability, concurrency, and auditability are non-negotiable.</p>
       <div class="tags">
-        <span class="tag gold">DIGITAL TWIN</span>
-        <span class="tag gold">MAVLINK v2 HIL</span>
-        <span class="tag gold">RK4 PHYSICS ENGINE</span>
-        <span class="tag">RAG SYSTEMS</span>
-        <span class="tag">LLM ENGINEERING</span>
-        <span class="tag">REINFORCEMENT LEARNING</span>
-        <span class="tag">VECTOR EMBEDDINGS</span>
-        <span class="tag">MUJOCO / GYMNASIUM</span>
-        <span class="tag">LANGCHAIN</span>
-        <span class="tag">TYPESCRIPT</span>
-        <span class="tag">PYTHON</span>
-        <span class="tag">TENSORFLOW.JS</span>
+        <span class="tag gold">SYSTEMS ENGINEERING</span>
+        <span class="tag gold">CONCURRENCY</span>
+        <span class="tag gold">ALGORITHMS</span>
+        <span class="tag">RAG PIPELINES</span>
+        <span class="tag">LLM INTEGRATION</span>
+        <span class="tag">INFORMATION RETRIEVAL</span>
+        <span class="tag">TYPESCRIPT / REACT</span>
+        <span class="tag">PYTHON / FASTAPI</span>
+        <span class="tag">DIGITAL TWIN ARCHITECTURE</span>
       </div>
     </div>
   </div>
@@ -511,8 +513,8 @@ footer p{font-family:'Space Mono',monospace;font-size:.6rem;color:var(--muted);l
         <div class="exp-co">ABYOM SPACE TECH</div>
         <div class="exp-period">⬡ Gujarat, India · March 2021 – May 2021</div>
         <ul class="exp-ul">
-          <li>Led a team of junior engineers in the R&amp;D roadmap for <strong>subsystem simulations</strong></li>
-          <li>Orchestrated <strong>static fire testing campaigns</strong> and oversaw DAQ system setups</li>
+          <li>Led a team of junior engineers in the R&amp;D roadmap for <strong>subsystem simulations</strong> using AWS cloud resources</li>
+          <li>Orchestrated <strong>static fire testing campaigns</strong> and oversaw DAQ system setups with MuJoCo integration</li>
           <li>Validated performance across <strong>20+ successful test cycles</strong> with precision measurement protocols</li>
         </ul>
       </div>
@@ -523,7 +525,7 @@ footer p{font-family:'Space Mono',monospace;font-size:.6rem;color:var(--muted);l
 <!-- PROJECTS -->
 <section id="projects">
   <div class="s-label">03 · PROJECTS</div>
-  <h2 class="s-title rv">AI Systems<br><span class="accent">I've Engineered</span></h2>
+  <h2 class="s-title rv">Engineered Systems &amp;<br><span class="accent">AI Pipelines</span></h2>
   <div class="proj-grid">
 
     <!-- ★ FEATURED: Copter Studios -->
@@ -533,33 +535,24 @@ footer p{font-family:'Space Mono',monospace;font-size:.6rem;color:var(--muted);l
       <!-- LEFT COLUMN -->
       <div class="feat-left">
         <div class="featured-badge">FLAGSHIP PROJECT</div>
-        <!-- Digital Twin Animated Icon (large) -->
         <div class="feat-icon-lg">
           <div class="twin-wrap">
-            <svg width="88" height="88" viewBox="0 0 88 88" fill="none">
-              <!-- Outer orbit ring -->
+            <svg width="88" height="88" viewBox="0 0 88 88" fill="none" aria-hidden="true">
               <g class="twin-ring-orbit" style="transform-origin:44px 44px">
                 <ellipse cx="44" cy="44" rx="38" ry="16" stroke="rgba(245,158,11,.25)" stroke-width="1" stroke-dasharray="4 6"/>
                 <circle cx="82" cy="44" r="3" fill="var(--gold)" class="twin-data-dot"/>
                 <circle cx="6" cy="44" r="2.5" fill="rgba(245,158,11,.6)" class="twin-data-dot"/>
               </g>
-              <!-- Inner orbit ring -->
               <g class="twin-ring-orbit2" style="transform-origin:44px 44px">
                 <ellipse cx="44" cy="44" rx="28" ry="10" stroke="rgba(0,229,255,.3)" stroke-width="1" stroke-dasharray="3 5" transform="rotate(60,44,44)"/>
                 <circle cx="44" cy="16" r="2" fill="var(--cyan)" class="twin-data-dot"/>
               </g>
-              <!-- Body arcs -->
               <circle cx="44" cy="44" r="22" stroke="rgba(139,92,246,.2)" stroke-width="1.5" stroke-dasharray="6 3"/>
-              <!-- Core -->
               <circle cx="44" cy="44" r="8" fill="var(--surface)" stroke="var(--gold)" stroke-width="1.5" class="twin-core-pulse"/>
-              <!-- Drone body at center -->
               <rect x="39" y="41" width="10" height="6" rx="2" fill="var(--gold)" opacity=".7"/>
-              <!-- Prop lines -->
               <line x1="36" y1="40" x2="30" y2="36" stroke="rgba(245,158,11,.6)" stroke-width="1.5"/>
               <line x1="52" y1="40" x2="58" y2="36" stroke="rgba(245,158,11,.6)" stroke-width="1.5"/>
-              <!-- Data pulses -->
               <circle cx="44" cy="44" r="14" stroke="rgba(0,229,255,.1)" stroke-width="1" fill="none"/>
-              <!-- Corner tick marks -->
               <line x1="10" y1="10" x2="18" y2="10" stroke="rgba(0,229,255,.4)" stroke-width="1.5"/>
               <line x1="10" y1="10" x2="10" y2="18" stroke="rgba(0,229,255,.4)" stroke-width="1.5"/>
               <line x1="78" y1="10" x2="70" y2="10" stroke="rgba(0,229,255,.4)" stroke-width="1.5"/>
@@ -575,8 +568,7 @@ footer p{font-family:'Space Mono',monospace;font-size:.6rem;color:var(--muted);l
         <div class="proj-title-lg">Copter Studios</div>
         <div class="proj-sub">AEROSPACE-GRADE FLIGHT SIMULATOR · v12 · HARDWARE-IN-THE-LOOP</div>
         <p class="proj-desc-lg">
-          A <b>production-grade Copter Studios</b> with full-fidelity physics, a from-scratch <span class="gold">MAVLink v2 HIL bridge</span> that connects to real PX4/ArduPilot flight controllers, and an AI sim operator powered by Gemini.
-          Built with the same standards used in professional aerospace simulation — then deployed in a browser.
+          A <b>production-grade Copter Studios</b> with full-fidelity physics, a from-scratch <span class="gold">MAVLink v2 HIL bridge</span> that connects to real PX4/ArduPilot flight controllers, and an AI sim operator powered by Gemini. Built with the same standards used in professional aerospace simulation — then deployed in a browser.
         </p>
 
         <div class="feat-specs">
@@ -586,15 +578,15 @@ footer p{font-family:'Space Mono',monospace;font-size:.6rem;color:var(--muted);l
           </div>
           <div class="feat-spec">
             <div class="feat-spec-label">HIL PROTOCOL</div>
-            <div class="feat-spec-val"><code>MAVLink v2</code> encoded from scratch (zero deps) · <code>HIL_SENSOR</code> · <code>HIL_GPS</code> · PX4 &amp; ArduPilot compatible</div>
+            <div class="feat-spec-val"><code>MAVLink v2</code> encoded from scratch (zero deps) · <code>HIL_SENSOR</code> · PX4 &amp; ArduPilot compatible</div>
           </div>
           <div class="feat-spec">
             <div class="feat-spec-label">RL AGENT</div>
-            <div class="feat-spec-val"><code>PPO</code> Actor-Critic · TensorFlow.js · User model upload · Web Worker benchmarking</div>
+            <div class="feat-spec-val"><code>PPO</code> Actor-Critic · TensorFlow.js · Web Worker concurrent benchmarking</div>
           </div>
           <div class="feat-spec">
             <div class="feat-spec-label">AI OPERATOR</div>
-            <div class="feat-spec-val"><code>Aether</code> — Gemini-powered sim controller · NL→config parsing · Crash forensics · SB3 export</div>
+            <div class="feat-spec-val"><code>Aether</code> — Gemini-powered sim controller · NL→config parsing · Crash forensics</div>
           </div>
         </div>
 
@@ -606,14 +598,11 @@ footer p{font-family:'Space Mono',monospace;font-size:.6rem;color:var(--muted);l
           <span class="st">TENSORFLOW.JS</span>
           <span class="st">PPO / RL</span>
           <span class="st">GEMINI API</span>
-          <span class="st">MUJOCO</span>
-          <span class="st">DRYDEN TURBULENCE</span>
-          <span class="st">CHEESEMAN-BENNETT GEF</span>
           <span class="st gold">PX4 / ArduPilot</span>
           <span class="st">WEB WORKERS</span>
         </div>
         <div class="feat-live" style="margin-top:1.6rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap">
-          <a href="https://copterstudios.com" target="_blank" rel="noopener" class="btn btn-p" style="font-size:.72rem;padding:.55rem 1.4rem;letter-spacing:.12em">
+          <a href="https://copterstudios.com" target="_blank" rel="noopener noreferrer" class="btn btn-p" style="font-size:.72rem;padding:.55rem 1.4rem;letter-spacing:.12em">
             &#x25B6; LAUNCH SIMULATOR
           </a>
           <span style="font-family:'Space Mono',monospace;font-size:.62rem;color:rgba(0,255,136,.45);letter-spacing:.08em">copterstudios.com</span>
@@ -636,25 +625,19 @@ footer p{font-family:'Space Mono',monospace;font-size:.6rem;color:var(--muted);l
               <span class="arch-arrow">→</span>
               <span class="arch-node">DroneState ×62.5Hz</span>
             </div>
-            <div class="arch-row" style="padding-left:2.5rem;opacity:.6;font-size:.55rem">RK4 · BET · Quaternion · Dryden · ISA · Prop Tables · Ground Effect</div>
+            <div class="arch-row" style="padding-left:2.5rem;opacity:.6;font-size:.55rem">RK4 · BET · Quaternion · Dryden · ISA · Ground Effect</div>
             <div class="arch-row">
               <span class="arch-node purple">RLAgent (Actor-Critic)</span>
               <span class="arch-arrow">→</span>
               <span class="arch-node">Episode Worker</span>
             </div>
-            <div class="arch-row" style="padding-left:2.5rem;opacity:.6;font-size:.55rem">TF.js · PPO · User model hot-swap · Web Worker (non-blocking)</div>
+            <div class="arch-row" style="padding-left:2.5rem;opacity:.6;font-size:.55rem">TF.js · PPO · User model hot-swap · Concurrent execution</div>
             <div class="arch-row">
               <span class="arch-node gold">Aether AI Operator</span>
               <span class="arch-arrow">→</span>
               <span class="arch-node">SimulationParser</span>
             </div>
-            <div class="arch-row" style="padding-left:2.5rem;opacity:.6;font-size:.55rem">Gemini Flash · NL→PhysicsConfig · Approval Dialog · SB3 export</div>
-            <div class="arch-row">
-              <span class="arch-node">DroneSim (Canvas 2D)</span>
-              <span class="arch-arrow">+</span>
-              <span class="arch-node purple">CrashForensics</span>
-            </div>
-            <div class="arch-row" style="padding-left:2.5rem;opacity:.6;font-size:.55rem">Real-time telemetry · Crash replay · Robustness panel · Digital Twin Calibrator</div>
+            <div class="arch-row" style="padding-left:2.5rem;opacity:.6;font-size:.55rem">Gemini Flash · NL→PhysicsConfig · Approval Dialog</div>
           </div>
 
           <div style="margin-top:2rem;padding:1rem 1.2rem;border:1px solid rgba(245,158,11,.15);background:rgba(245,158,11,.03)">
@@ -665,29 +648,68 @@ footer p{font-family:'Space Mono',monospace;font-size:.6rem;color:var(--muted);l
       </div>
     </div>
 
-    <!-- 01 DocuQuery -->
+    <!-- 01 MiniIndex -->
     <div class="proj-card rv">
       <div class="proj-num">01</div>
-      <div class="icon-wrap">
-        <div class="robot-antenna"></div>
-        <div class="robot-head">
-          <div class="robot-eye l"></div>
-          <div class="robot-eye r"></div>
-          <div class="robot-mouth"></div>
+      <div class="icon-wrap" style="position:relative">
+        <div class="chart-wrap">
+          <div class="chart-bars-row">
+            <div class="c-bar"></div><div class="c-bar"></div><div class="c-bar"></div>
+            <div class="c-bar"></div><div class="c-bar"></div>
+          </div>
         </div>
-        <div class="robot-body"></div>
       </div>
-      <div class="proj-title">DocuQuery AI — TerrierHelper</div>
-      <div class="proj-sub">INSTITUTIONAL RAG ASSISTANT</div>
-      <p class="proj-desc">Engineered a client-side RAG system ingesting PDFs to deliver policy-accurate answers via LLM embeddings. Strict prompt guardrails eliminate hallucinations with real-time token streaming.</p>
+      <div class="proj-title">MiniIndex Search Engine</div>
+      <div class="proj-sub">ALGORITHMIC INFORMATION RETRIEVAL</div>
+      <p class="proj-desc">Built an inverted-index search engine from scratch featuring a custom tokenizer, <b>BM25 ranking</b> algorithm, and min-heap-based top-K retrieval to avoid full-set sorting. Complete with boolean query parsing and Levenshtein-distance typos.</p>
       <div class="stack">
-        <span class="st">GEMINI API</span><span class="st">REACT</span><span class="st">TYPESCRIPT</span><span class="st">RAG</span><span class="st">VECTOR RETRIEVAL</span>
+        <span class="st">PYTHON</span><span class="st">INVERTED INDEX</span><span class="st">BM25</span><span class="st">HEAPS</span><span class="st">ALGORITHMS</span>
       </div>
     </div>
 
-    <!-- 02 Smart Outlook -->
+    <!-- 02 TinyQueue -->
     <div class="proj-card rv" style="transition-delay:.1s">
       <div class="proj-num">02</div>
+      <div class="icon-wrap" style="position:relative">
+        <div class="gear-wrap">
+          <svg width="52" height="52" viewBox="0 0 52 52" aria-hidden="true">
+            <g class="gear-svg" transform-origin="26 26">
+              <path d="M26,8 L29,14 L35,11 L33,17 L39,19 L35,26 L39,33 L33,35 L35,41 L29,38 L26,44 L23,38 L17,41 L19,35 L13,33 L17,26 L13,19 L19,17 L17,11 L23,14 Z" fill="none" stroke="rgba(0,229,255,.55)" stroke-width="1.4"/>
+              <circle cx="26" cy="26" r="9" fill="none" stroke="rgba(0,229,255,.3)" stroke-width="1.2"/>
+            </g>
+            <circle class="gear-core-dot" cx="26" cy="26" r="4" fill="var(--cyan)"/>
+          </svg>
+        </div>
+      </div>
+      <div class="proj-title">TinyQueue</div>
+      <div class="proj-sub">DISTRIBUTED TASK QUEUE</div>
+      <p class="proj-desc">Engineered a fault-tolerant job queue using a <b>socket-based client/server protocol</b> and concurrent multi-process workers. Implemented at-least-once delivery via visibility timeouts and dead-letter queues after max retries.</p>
+      <div class="stack">
+        <span class="st">PYTHON</span><span class="st">SOCKETS</span><span class="st">MULTIPROCESSING</span><span class="st">DISTRIBUTED SYSTEMS</span>
+      </div>
+    </div>
+
+    <!-- 03 TerrierHelper -->
+    <div class="proj-card rv" style="transition-delay:.2s">
+      <div class="proj-num">03</div>
+      <div class="icon-wrap">
+        <div class="robot-antenna"></div>
+        <div class="robot-head">
+          <div class="robot-eye l"></div><div class="robot-eye r"></div><div class="robot-mouth"></div>
+        </div>
+        <div class="robot-body"></div>
+      </div>
+      <div class="proj-title">TerrierHelper AI</div>
+      <div class="proj-sub">INSTITUTIONAL RAG ASSISTANT</div>
+      <p class="proj-desc">Engineered a client-side RAG system ingesting PDFs to deliver policy-accurate answers via LLM embeddings. Strict prompt guardrails eliminate hallucinations with real-time token streaming and cosine-similarity searches.</p>
+      <div class="stack">
+        <span class="st">GEMINI API</span><span class="st">REACT / TS</span><span class="st">RAG</span><span class="st">VECTOR RETRIEVAL</span>
+      </div>
+    </div>
+
+    <!-- 04 Smart Outlook -->
+    <div class="proj-card rv" style="transition-delay:.3s">
+      <div class="proj-num">04</div>
       <div class="icon-wrap" style="position:relative">
         <div class="env-outer">
           <div class="env-box">
@@ -700,85 +722,7 @@ footer p{font-family:'Space Mono',monospace;font-size:.6rem;color:var(--muted);l
       <div class="proj-sub">LLM-POWERED EMAIL AUTOMATION</div>
       <p class="proj-desc">AI tool analyzing incoming emails and auto-drafting context-aware responses from a secured knowledge base. Human-in-the-loop approval with semantic analysis for consistent administrative tone at scale.</p>
       <div class="stack">
-        <span class="st">GEMINI FLASH</span><span class="st">PYTHON</span><span class="st">WORKFLOW AUTOMATION</span><span class="st">PDF PARSING</span>
-      </div>
-    </div>
-
-    <!-- 03 EquiQuery -->
-    <div class="proj-card rv" style="transition-delay:.2s">
-      <div class="proj-num">03</div>
-      <div class="icon-wrap" style="position:relative">
-        <div class="chart-wrap">
-          <div class="chart-bars-row">
-            <div class="c-bar"></div><div class="c-bar"></div><div class="c-bar"></div>
-            <div class="c-bar"></div><div class="c-bar"></div>
-          </div>
-          <svg class="chart-svg-line" viewBox="0 0 48 38" style="position:absolute;inset:0;width:100%;height:100%">
-            <polyline class="c-line" points="4,30 10,18 18,24 26,10 34,16 44,5"/>
-            <circle class="c-dot" cx="44" cy="5" r="2.5"/>
-          </svg>
-        </div>
-      </div>
-      <div class="proj-title">EquiQuery AI</div>
-      <div class="proj-sub">AI-POWERED QUANTITATIVE ANALYTICS ENGINE</div>
-      <p class="proj-desc">Scalable RAG pipeline integrating LLM inference with structured financial document retrieval. Quantitative anomaly detection via Scikit-learn ensures high-confidence, auditable outputs for investment-critical decisions.</p>
-      <div class="stack">
-        <span class="st">PYTHON</span><span class="st">PANDAS</span><span class="st">SCIKIT-LEARN</span><span class="st">RAG</span><span class="st">STATISTICS</span>
-      </div>
-    </div>
-
-    <!-- 04 Investment Workflow -->
-    <div class="proj-card rv" style="transition-delay:.3s">
-      <div class="proj-num">04</div>
-      <div class="icon-wrap" style="position:relative">
-        <div class="gear-wrap">
-          <svg width="52" height="52" viewBox="0 0 52 52">
-            <g class="gear-svg" transform-origin="26 26">
-              <path d="M26,8 L29,14 L35,11 L33,17 L39,19 L35,26 L39,33 L33,35 L35,41 L29,38 L26,44 L23,38 L17,41 L19,35 L13,33 L17,26 L13,19 L19,17 L17,11 L23,14 Z" fill="none" stroke="rgba(0,229,255,.55)" stroke-width="1.4"/>
-              <circle cx="26" cy="26" r="9" fill="none" stroke="rgba(0,229,255,.3)" stroke-width="1.2"/>
-            </g>
-            <g style="transform:translate(38px,38px)">
-              <g class="gear-svg2" transform-origin="0 0">
-                <path d="M0,-7 L2,-4 L5,-5 L4,-2 L7,0 L4,2 L5,5 L2,4 L0,7 L-2,4 L-5,5 L-4,2 L-7,0 L-4,-2 L-5,-5 L-2,-4 Z" fill="none" stroke="rgba(139,92,246,.6)" stroke-width="1.2"/>
-              </g>
-            </g>
-            <circle class="gear-core-dot" cx="26" cy="26" r="4" fill="var(--cyan)"/>
-          </svg>
-        </div>
-      </div>
-      <div class="proj-title">Investment Workflow Engine</div>
-      <div class="proj-sub">AI-DRIVEN PROCESS SYSTEMATIZATION · SFC</div>
-      <p class="proj-desc">End-to-end automation pipeline using Python &amp; NLP to parse inputs, classify intent, and generate structured outputs — reducing manual effort by <b>40%</b>. Microservice architecture with REST APIs for production-grade scalability.</p>
-      <div class="stack">
-        <span class="st">PYTHON</span><span class="st">NLP</span><span class="st">REST APIS</span><span class="st">AUTOMATION</span><span class="st">RULE-BASED ML</span>
-      </div>
-    </div>
-
-    <!-- 05 Bi-Copter RL (MuJoCo) -->
-    <div class="proj-card rv" style="transition-delay:.4s">
-      <div class="proj-num">05</div>
-      <div class="icon-wrap" style="position:relative">
-        <div class="drone-wrap">
-          <div class="d-ring"></div>
-          <div class="d-ring d-ring2"></div>
-          <div class="drone-float" style="position:relative;width:46px;height:46px">
-            <div class="d-arm" style="width:18px;position:absolute;top:50%;left:50%;transform-origin:0 50%;transform:rotate(45deg) translateY(-50%)"></div>
-            <div class="d-arm" style="width:18px;position:absolute;top:50%;left:50%;transform-origin:0 50%;transform:rotate(-45deg) translateY(-50%)"></div>
-            <div class="d-arm" style="width:18px;position:absolute;top:50%;left:50%;transform-origin:0 50%;transform:rotate(135deg) translateY(-50%)"></div>
-            <div class="d-arm" style="width:18px;position:absolute;top:50%;left:50%;transform-origin:0 50%;transform:rotate(-135deg) translateY(-50%)"></div>
-            <div class="d-prop" style="width:18px;top:4px;left:4px"></div>
-            <div class="d-prop rev" style="width:18px;top:4px;right:4px"></div>
-            <div class="d-prop" style="width:18px;bottom:4px;left:4px"></div>
-            <div class="d-prop rev" style="width:18px;bottom:4px;right:4px"></div>
-            <div class="d-body" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)"></div>
-          </div>
-        </div>
-      </div>
-      <div class="proj-title">Bi-Copter Hover Controller</div>
-      <div class="proj-sub">REINFORCEMENT LEARNING · MUJOCO SIMULATION</div>
-      <p class="proj-desc">PPO-based RL controller achieving clean monotonic training convergence for stable hover at 1.0m altitude. Custom reward shaping, observation normalization, and thrust calibration in MuJoCo + Gymnasium. Companion trainer to the Copter Studios.</p>
-      <div class="stack">
-        <span class="st">MUJOCO</span><span class="st">PPO</span><span class="st">STABLE-BASELINES3</span><span class="st">GYMNASIUM</span><span class="st">PYTHON</span>
+        <span class="st">GEMINI FLASH</span><span class="st">PYTHON</span><span class="st">WORKFLOW AUTOMATION</span><span class="st">NLP</span>
       </div>
     </div>
 
@@ -791,31 +735,28 @@ footer p{font-family:'Space Mono',monospace;font-size:.6rem;color:var(--muted);l
   <h2 class="s-title rv">Technical<br><span class="accent">Arsenal</span></h2>
   <div class="skills-grid">
     <div class="sk-cat rv">
-      <div class="sk-cat-title">// AI &amp; MACHINE LEARNING</div>
-      <div class="sk-item"><div class="sk-row"><span class="sk-name">RAG Architecture</span><span class="sk-lvl">ADVANCED</span></div><div class="sk-bar"><div class="sk-fill" data-w="92"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span class="sk-name">Prompt Engineering</span><span class="sk-lvl">ADVANCED</span></div><div class="sk-bar"><div class="sk-fill" data-w="90"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span class="sk-name">LLM Integration (Gemini)</span><span class="sk-lvl">ADVANCED</span></div><div class="sk-bar"><div class="sk-fill" data-w="88"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span class="sk-name">Reinforcement Learning (PPO)</span><span class="sk-lvl">PROFICIENT</span></div><div class="sk-bar"><div class="sk-fill" data-w="78"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span class="sk-name">Vector Embeddings</span><span class="sk-lvl">PROFICIENT</span></div><div class="sk-bar"><div class="sk-fill" data-w="82"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span class="sk-name">Scikit-Learn / Statistics</span><span class="sk-lvl">PROFICIENT</span></div><div class="sk-bar"><div class="sk-fill" data-w="79"></div></div></div>
+      <div class="sk-cat-title">// SOFTWARE &amp; SYSTEMS ENGINEERING</div>
+      <div class="sk-item"><div class="sk-row"><span class="sk-name">Data Structures &amp; Algorithms</span><span class="sk-lvl">ADVANCED</span></div><div class="sk-bar"><div class="sk-fill" data-w="92"></div></div></div>
+      <div class="sk-item"><div class="sk-row"><span class="sk-name">Concurrent Programming</span><span class="sk-lvl">ADVANCED</span></div><div class="sk-bar"><div class="sk-fill" data-w="88"></div></div></div>
+      <div class="sk-item"><div class="sk-row"><span class="sk-name">Distributed Systems (Sockets)</span><span class="sk-lvl">PROFICIENT</span></div><div class="sk-bar"><div class="sk-fill" data-w="82"></div></div></div>
+      <div class="sk-item"><div class="sk-row"><span class="sk-name">Client-Server Architecture</span><span class="sk-lvl">ADVANCED</span></div><div class="sk-bar"><div class="sk-fill" data-w="89"></div></div></div>
+      <div class="sk-item"><div class="sk-row"><span class="sk-name">Information Retrieval (BM25)</span><span class="sk-lvl">PROFICIENT</span></div><div class="sk-bar"><div class="sk-fill" data-w="85"></div></div></div>
     </div>
     <div class="sk-cat rv" style="transition-delay:.18s">
-      <div class="sk-cat-title">// SIMULATION &amp; ROBOTICS</div>
-      <div class="sk-item"><div class="sk-row"><span class="sk-name">Physics Engine Design (RK4/BET)</span><span class="sk-lvl">ADVANCED</span></div><div class="sk-bar"><div class="sk-fill gold-fill" data-w="88"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span class="sk-name">MAVLink v2 Protocol</span><span class="sk-lvl">ADVANCED</span></div><div class="sk-bar"><div class="sk-fill gold-fill" data-w="85"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span class="sk-name">Digital Twin Architecture</span><span class="sk-lvl">ADVANCED</span></div><div class="sk-bar"><div class="sk-fill gold-fill" data-w="86"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span class="sk-name">MuJoCo / Gymnasium</span><span class="sk-lvl">PROFICIENT</span></div><div class="sk-bar"><div class="sk-fill" data-w="76"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span class="sk-name">TensorFlow.js</span><span class="sk-lvl">PROFICIENT</span></div><div class="sk-bar"><div class="sk-fill" data-w="75"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span class="sk-name">Aerospace Aero Modelling</span><span class="sk-lvl">PROFICIENT</span></div><div class="sk-bar"><div class="sk-fill gold-fill" data-w="80"></div></div></div>
+      <div class="sk-cat-title">// AI, ML &amp; SIMULATION</div>
+      <div class="sk-item"><div class="sk-row"><span class="sk-name">RAG &amp; Vector Embeddings</span><span class="sk-lvl">ADVANCED</span></div><div class="sk-bar"><div class="sk-fill gold-fill" data-w="90"></div></div></div>
+      <div class="sk-item"><div class="sk-row"><span class="sk-name">LLM Integration (Gemini, Claude)</span><span class="sk-lvl">ADVANCED</span></div><div class="sk-bar"><div class="sk-fill gold-fill" data-w="92"></div></div></div>
+      <div class="sk-item"><div class="sk-row"><span class="sk-name">Reinforcement Learning (PPO)</span><span class="sk-lvl">PROFICIENT</span></div><div class="sk-bar"><div class="sk-fill" data-w="78"></div></div></div>
+      <div class="sk-item"><div class="sk-row"><span class="sk-name">Physics Engine Design (RK4)</span><span class="sk-lvl">ADVANCED</span></div><div class="sk-bar"><div class="sk-fill gold-fill" data-w="88"></div></div></div>
+      <div class="sk-item"><div class="sk-row"><span class="sk-name">MAVLink v2 Protocol &amp; HIL</span><span class="sk-lvl">ADVANCED</span></div><div class="sk-bar"><div class="sk-fill gold-fill" data-w="85"></div></div></div>
     </div>
     <div class="sk-cat rv" style="transition-delay:.36s">
       <div class="sk-cat-title">// LANGUAGES, TOOLS &amp; CLOUD</div>
-      <div class="sk-item"><div class="sk-row"><span class="sk-name">Python (AI &amp; Backend)</span><span class="sk-lvl">ADVANCED</span></div><div class="sk-bar"><div class="sk-fill" data-w="93"></div></div></div>
+      <div class="sk-item"><div class="sk-row"><span class="sk-name">Python (AI, Backend &amp; Algorithms)</span><span class="sk-lvl">ADVANCED</span></div><div class="sk-bar"><div class="sk-fill" data-w="93"></div></div></div>
       <div class="sk-item"><div class="sk-row"><span class="sk-name">TypeScript / JavaScript</span><span class="sk-lvl">ADVANCED</span></div><div class="sk-bar"><div class="sk-fill" data-w="88"></div></div></div>
       <div class="sk-item"><div class="sk-row"><span class="sk-name">React.js / Node.js</span><span class="sk-lvl">ADVANCED</span></div><div class="sk-bar"><div class="sk-fill" data-w="85"></div></div></div>
       <div class="sk-item"><div class="sk-row"><span class="sk-name">Google Cloud / Vertex AI</span><span class="sk-lvl">PROFICIENT</span></div><div class="sk-bar"><div class="sk-fill" data-w="78"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span class="sk-name">LangChain / ChromaDB</span><span class="sk-lvl">PROFICIENT</span></div><div class="sk-bar"><div class="sk-fill" data-w="76"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span class="sk-name">Docker / AWS / Git</span><span class="sk-lvl">PROFICIENT</span></div><div class="sk-bar"><div class="sk-fill" data-w="78"></div></div></div>
+      <div class="sk-item"><div class="sk-row"><span class="sk-name">Docker / AWS / Git</span><span class="sk-lvl">PROFICIENT</span></div><div class="sk-bar"><div class="sk-fill" data-w="82"></div></div></div>
     </div>
   </div>
 </section>
@@ -838,13 +779,6 @@ footer p{font-family:'Space Mono',monospace;font-size:.6rem;color:var(--muted);l
       <div class="edu-pd">Aug 2017 – May 2021</div>
     </div>
   </div>
-  <div class="s-label">CERTIFICATIONS</div>
-  <div class="cert-grid" style="margin-top:1rem">
-    <div class="cert rv">Accenture Strategy Consulting Simulation (Forage)</div>
-    <div class="cert rv" style="transition-delay:.1s">PwC Digital Intelligence Simulation (Forage)</div>
-    <div class="cert rv" style="transition-delay:.2s">Programming for Everybody — Coursera</div>
-    <div class="cert rv" style="transition-delay:.3s">Aerospace Materials — Coursera</div>
-  </div>
 </section>
 
 <!-- CONTACT -->
@@ -852,18 +786,18 @@ footer p{font-family:'Space Mono',monospace;font-size:.6rem;color:var(--muted);l
   <div class="contact-inner">
     <div class="s-label" style="justify-content:center">06 · CONTACT</div>
     <h2 class="contact-title rv">Let's Build Something<br>Extraordinary</h2>
-    <p class="contact-sub rv">Actively seeking AI/ML engineering, robotics simulation, or aerospace AI roles. Whether you're building intelligent autonomous systems, digital twins, or the next wave of LLM-powered infrastructure — I want to hear from you.</p>
+    <p class="contact-sub rv">Actively seeking Software Engineering and Applied AI roles. Whether you're building intelligent autonomous systems, scalable infrastructure, or the next wave of LLM-powered applications — let's connect.</p>
     <div class="contact-links rv">
       <a href="mailto:saiptkunche@gmail.com" class="cl"><span>✉</span>saiptkunche@gmail.com</a>
       <a href="tel:+15512084764" class="cl"><span>☎</span>+1 551 208 4764</a>
-      <a href="https://linkedin.com/in/sai-pavan-teja-kunche-44a33a15b/" target="_blank" class="cl"><span>in</span>LinkedIn</a>
+      <a href="https://linkedin.com/in/sai-pavan-teja-kunche-44a33a15b/" target="_blank" rel="noopener noreferrer" class="cl"><span>in</span>LinkedIn</a>
     </div>
   </div>
 </section>
 
 <footer>
   <p>© 2026 SAI PAVAN TEJA KUNCHE</p>
-  <p>AI / ML &amp; ROBOTICS ENGINEER · BROOKLYN, NY</p>
+  <p>SOFTWARE ENGINEER · SYSTEMS &amp; AI</p>
 </footer>
 
 <script>
@@ -878,7 +812,7 @@ document.querySelectorAll('a,button,.proj-card,.proj-card-featured,.exp-card').f
   el.addEventListener('mouseleave',()=>{cur.style.width=cur.style.height='10px';ring.style.width=ring.style.height='36px'});
 });
 
-const roles=['AI Software Engineer','Simulation Architect','Digital Twin Engineer','RAG Systems Architect','LLM Integration Specialist','Aerospace AI Engineer'];
+const roles=['Software Engineer','Full-Stack Builder','Distributed Systems','Information Retrieval','Applied AI Developer','Digital Twin Engineer'];
 let ri=0,ci=0,del=false;
 const tel=document.getElementById('typer');
 function tw(){
@@ -965,7 +899,7 @@ document.querySelectorAll('.proj-card').forEach(card=>{
   card.addEventListener('mouseleave',()=>{cancelAnimationFrame(raf);card.style.transition='transform .5s ease,box-shadow .35s';card.style.transform='';setTimeout(()=>card.style.transition='',500)});
   card.addEventListener('mouseenter',()=>{card.style.transition='transform .08s,box-shadow .35s'});
 });
-/* Featured card subtle tilt */
+
 const fc=document.querySelector('.proj-card-featured');
 if(fc){
   let raf2;
