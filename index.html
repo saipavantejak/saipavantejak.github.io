@@ -47,7 +47,7 @@ nav.scrolled{border-bottom-color:var(--border);box-shadow:0 1px 8px rgba(28,29,2
 @keyframes floatOrb{0%,100%{transform:translate(0,0)}33%{transform:translate(25px,-15px)}66%{transform:translate(-15px,20px)}}
 .hero-content{position:relative;z-index:10;max-width:720px}
 .hero-label{font-family:'Inter',sans-serif;font-size:.68rem;font-weight:500;letter-spacing:.2em;color:var(--olive);display:flex;align-items:center;gap:.8rem;margin-bottom:2rem;text-transform:uppercase;opacity:0;animation:fadeUp .9s .3s ease-out forwards}
-.hero-label::before{content:'';display:block;width:2.2rem;height:1.5px;background:var(--olive)}
+.hero-label::before{display: none}
 .hero-name{font-family:'Inter',sans-serif;font-size:clamp(2.8rem,6.5vw,5.6rem);font-weight:800;line-height:1.06;letter-spacing:-.02em;margin-bottom:.8rem;color:var(--charcoal);opacity:0;animation:fadeUp .9s .5s ease-out forwards}
 .hero-name .accent{color:var(--olive)}
 .hero-role{font-family:'Inter',sans-serif;font-size:clamp(.95rem,2vw,1.25rem);color:var(--olive);font-weight:500;margin-bottom:1.8rem;min-height:2rem;opacity:0;animation:fadeUp .9s .7s ease-out forwards}
@@ -74,7 +74,7 @@ nav.scrolled{border-bottom-color:var(--border);box-shadow:0 1px 8px rgba(28,29,2
 /* ═══ SECTIONS ═══ */
 section{padding:7.5rem 8vw;position:relative}
 .s-label{font-family:'Inter',sans-serif;font-size:.62rem;font-weight:600;letter-spacing:.25em;color:var(--olive);display:flex;align-items:center;gap:.8rem;margin-bottom:.8rem;text-transform:uppercase}
-.s-label::before{content:'';display:block;width:1.8rem;height:1.5px;background:var(--olive)}
+.s-label::before{display:none !important}
 .s-title{font-family:'Inter',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;letter-spacing:-.01em;line-height:1.12;margin-bottom:4rem;color:var(--charcoal)}
 .accent{color:var(--olive)}
 .section-rule{width:60px;height:1px;background:var(--border);margin:0 auto}
